@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=Edge,chrome=1">
+		<title>居中布局[水平+垂直]二</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			
+			.parent{width: 1000px;height: 700px;background: #CCC;position: relative;}
+			/**
+			 * position只有设置为relative时才不脱离文档流。
+			 */
+			.child{width: 200px;height: 200px;background: #80706d;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+			/**
+			 * 主要应用定位和偏移
+			 * 如果不考虑兼容性，此方法更适用。
+			 */
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="child">
+				
+			</div>
+		</div>
+	</body>
+</html>
