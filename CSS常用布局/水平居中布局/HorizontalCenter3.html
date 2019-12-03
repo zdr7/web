@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css布局-水平居中显示三</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			.desc{margin: 1.25rem;transform: translateY(160%);}
+			.desc th,td{padding: 0.625rem 1.25rem;}
+			
+			.parent{width: 100%;height: 200px;background: #CCC;position: absolute;}
+			
+			.child{width: 200px;height: 200px;background: #80706d;position: absolute;left: 50%;transform: translateX(-50%);}
+			/**
+			 * 设置子级元素为绝对定位：
+				* 1.如果父级元素没有开启定位，子级元素相对于页面定位。
+				* 2.如果父级元素开启定位，子级元素相对于父级元素定位。
+			 * transform平移-translateX横向平移取width值。
+			 */
+		</style>
+	</head>
+	<body> 
+		<div class="parent">
+			<div class="child">
+				
+			</div>
+			<div class="desc">
+				<table border="1" cellspacing="0" cellpadding="0">
+					<tr><th colspan="2";>优缺点</th></tr>
+					<tr>
+						<td>优点</td>
+						<td>父级元素是否脱离文档流，都不会影响子级元素居中效果</td>
+					</tr>
+					<tr>
+						<td>缺点</td>
+						<td>transform属于CSS3属性，浏览器支持不太好</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

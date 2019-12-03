@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css布局-水平居中显示一</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			.desc{margin: 1.25rem;}
+			.desc th,td{padding: 0.625rem 1.25rem;}
+			
+			.parent{width: 100%;height: 200px;background: #CCC;text-align: center;}
+			/**
+			 * text-align：为文本内容设置对齐方式（子元素），包含left，center，right。
+			 */
+			.child{width: 200px;height: 200px;background: #80706d;display: inline-block;}
+			/**
+			 * display：block-块级，
+			 inline-内联，
+				width和height属性失效
+			 inline-block-行内块级
+				width和height属性有效
+			 */
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="child">
+				
+			</div>
+			<div class="desc">
+				<table border="1" cellspacing="0" cellpadding="0">
+					<tr><th colspan="2";>优缺点</th></tr>
+					<tr>
+						<td>优点</td>
+						<td>浏览器兼容性比较好（IE6-9），text-align和inline-block属于CSS2属性。</td>
+					</tr>
+					<tr>
+						<td>缺点</td>
+						<td>text-align属性具有继承性，会导致子元素中的文本都居中显示。如需修改，在子元素中重新设置text-align属性值。</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
