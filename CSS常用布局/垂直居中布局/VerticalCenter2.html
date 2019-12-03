@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=Edge,chrome=1">
+		<title>垂直居中布局二</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			.desc{float: left;position: absolute;margin-left: 20rem;}
+			.desc th,td{padding: 0.625rem 1.25rem;}
+			
+			.parent{width: 200px;height: 600px;background: #CCC;position: absolute;}
+			.child{width: 200px;height: 200px;background: #80706d;position: absolute;top: 50%;transform: translateY(-50%);}
+			/**
+			 * 设置子级元素为绝对定位：
+				* 1.如果父级元素没有开启定位，子级元素相对于页面定位。
+				* 2.如果父级元素开启定位，子级元素相对于父级元素定位。
+			 */
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="child">
+				
+			</div>
+			
+		</div>
+		<div class="desc">
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr><th colspan="2";>优缺点</th></tr>
+				<tr>
+					<td>优点</td>
+					<td>无论父级元素是否脱离文档流，都不影响子级元素垂直居中效果。</td>
+				</tr>
+				<tr>
+					<td>缺点</td>
+					<td>transform属于CSS3属性，浏览器支持不太好。</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

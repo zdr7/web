@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=Edge,chrome=1">
+		<title>垂直居中布局一</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			.desc{float: left;position: absolute;margin-left: 20rem;top:0;}
+			.desc th,td{padding: 0.625rem 1.25rem;}
+			
+			.parent{width: 200px;height: 600px;background: #CCC;display: table-cell;vertical-align: middle;}
+			/**
+			 * display属性规定元素应该生成的框的类型。
+			 说明：这个属性用于定义建立布局时元素生成的显示框类型。对于 HTML 等文档类型，如果使用 display 不谨慎会很危险，因为可能违反 HTML 中已经定义的显示层次结构。
+			 对于 XML，由于 XML 没有内置的这种层次结构，所有 display 是绝对必要的。
+			 table：作为块级表格来显示（类似 <table>），表格前后带有换行符。
+			 table-cell：作为一个表格单元格显示（类似 <td> 和 <th>）。【单元格里的内容有两种对齐方式：1.水平；2.垂直；】
+			 
+			 * vertical-align属性设置元素的垂直对齐方式
+			 说明：该属性定义行内元素的基线相对于该元素所在行的基线的垂直对齐。允许指定负长度值和百分比值。
+			 这会使元素降低而不是升高。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式。
+			 top：顶部对齐；middle：居中对齐；bottom：底部对齐；
+			 */
+			.child{width: 200px;height: 200px;background: #80706d;}
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="child">
+				
+			</div>
+			
+		</div>
+		<div class="desc">
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr><th colspan="2";>优缺点</th></tr>
+				<tr>
+					<td>优点</td>
+					<td>浏览器的兼容性较好。</td>
+				</tr>
+				<tr>
+					<td>缺点</td>
+					<td>vertical-align属性具有继承性，导致父级元素中的文本也会居中显示。【如果父级元素中包含除子级元素以外的文本内容，则此方法不适用】</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
