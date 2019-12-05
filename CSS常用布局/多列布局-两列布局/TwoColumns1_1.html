@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=Edge,chrome=1">
+		<title>两列布局一[简易]</title>
+		<style type="text/css">
+			* {padding: 0;margin: 0;}
+			.desc{margin: 1.25rem;}
+			.desc th,td{padding: 0.625rem 1.25rem;}
+			.parent{}
+			.left,.right{height:300px;}
+			.left{width: 300px;background: #80706D;float: left;}
+			/**
+			 * 设置float属性，脱离文档流
+			 */
+			.right{background: #CCCCCC;margin-left: 300px;}
+			/* .inner{height: 300px; background: #C9F76F;clear: both;} */
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="left">
+				
+			</div>
+			<div class="right">
+				<div class="inner">
+					
+				</div>
+			</div>
+		</div>
+		<div class="desc">
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr><th colspan="2";>优缺点</th></tr>
+				<tr>
+					<td>优点</td>
+					<td>实现简单</td>
+				</tr>
+				<tr>
+					<td>缺点</td>
+					<td>1.右边变宽div的margin属性值要与左边定宽width值保持一致。【耦合度较高】<br>
+						2.当右边变宽div包含其他内容，使用clear:both会受到左边定宽div设置的float属性影响。</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

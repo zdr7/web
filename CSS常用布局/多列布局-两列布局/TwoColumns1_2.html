@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=Edge,chrome=1">
+		<title>两列布局一[优化]</title>
+		<style type="text/css">
+			* {padding: 0;margin: 0;}
+			.parent{}
+			.left,.right{height:300px;}
+			.left{width: 300px;background: #80706D;float: left;position: relative;}
+			/**
+			 * 设置float属性，脱离文档流。
+				position: relative; 定位的显示层级比浮动的显示层级高。
+			 */
+			
+			/*自适应*/
+			.right-fix{float: right;background: #38B2CE;width: 100%;margin-left: -300px;}
+			/**
+			 * 设置浮动，默认宽度不是100%，是由子级元素宽度撑起。
+				width：100%相对浏览器。
+			 */
+			.right{background: #CCCCCC;}
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="left">
+				
+			</div>
+			<div class="right-fix">
+				<div class="right">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
