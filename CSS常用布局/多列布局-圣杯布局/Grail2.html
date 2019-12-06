@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=Edge,chrome=1">
+		<title>圣杯布局二</title>
+		<style type="text/css">
+			* {padding: 0;margin: 0;}
+			.desc{margin: 1.25rem;}
+			.desc th,td{padding: 0.625rem 1.25rem;}
+			.parent{height: 300px;margin-left: 400px;margin-right: 300px;}
+			.left,.middle,.right{height:300px;float: left;}
+			.middle{background: #38B2CE;width: 100%;}
+			/**
+			 * width为父级宽度的100%；
+			 */
+			.left{width: 400px;background: #80706D;margin-left: -100%;position: relative; left: -400px;}
+			/**
+			 * margin-left: -100%将当前元素移动到上一行的相同位置。
+			 */
+			.right{width:300px; background: #CCCCCC;margin-left: -300px;position: relative;right: -300px;}
+			
+			/**
+			 * 注意：
+			 1.兄弟元素中，前面的元素没有浮动，后面的元素有浮动。后面的元素不允许超过前面的元素。
+			 */
+		</style>
+	</head>
+	<body>
+		<!-- 布局实践：自适应+定宽+定宽 -->
+		<div class="parent">
+			<div class="middle">中</div>
+			<div class="left">左</div>
+			<div class="right">右</div>
+		</div>
+	</body>
+</html>

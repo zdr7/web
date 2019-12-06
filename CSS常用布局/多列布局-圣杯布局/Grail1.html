@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=Edge,chrome=1">
+		<title>圣杯布局一</title>
+		<style type="text/css">
+			* {padding: 0;margin: 0;}
+			.desc{margin: 1.25rem;}
+			.desc th,td{padding: 0.625rem 1.25rem;}
+			.parent{}
+			.left,.middle,.right{height:300px;}
+			.left{width: 300px;background: #80706D;float: left;}
+			.middle{width: auto;background: #38B2CE;margin: auto 300px;}
+			.right{width:300px; background: #CCCCCC;float: right;}
+			
+			/**
+			 * 注意：
+			 1.兄弟元素中，前面的元素没有浮动，后面的元素有浮动。后面的元素不允许超过前面的元素。
+			 */
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<!-- 布局实践：定宽+自适应+定宽 -->
+			<div class="middle">中</div>
+			<div class="left">左</div>
+			<div class="right">右</div>
+		</div>
+		<div class="desc">
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr><th colspan="2";>优缺点</th></tr>
+				<tr>
+					<td>缺点</td>
+					<td>作为自适应的列，是整个页面最重要的部分。而此方法把核心部分置于最后，对于搜索引擎的抓取不友好。</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
