@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=Edge,chrome=1">
+		<title>三列布局二</title>
+		<style type="text/css">
+			* {padding: 0;margin: 0;}
+			.desc{margin: 1.25rem;}
+			.desc th,td{padding: 0.625rem 1.25rem;}
+			.parent{}
+			/**
+			 * 
+			 */
+			.left,.middle,.right{height:300px;}
+			.left{width: 300px;background: #80706D;float: left;}
+			.middle{width: 300px;background: #38B2CE;float: left;}
+			.right{background: #CCCCCC;overflow: hidden;}
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="left">
+				左
+			</div>
+			<div class="middle">
+				中
+			</div>
+			<div class="right">
+				右
+			</div>
+		</div>
+		<div class="desc">
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr><th colspan="2";>优缺点</th></tr>
+				<tr>
+					<td>优点</td>
+					<td>简单易用</td>
+				</tr>
+				<tr>
+					<td>缺点</td>
+					<td>1.左侧定宽div开启浮动，右侧变宽div没有开启浮动。旧版本浏览器兼容性不好。<br>
+						2.overflow属性可以解决三列布局，同时也设置了内容溢出的情况。hidden属性在内容溢出时会被隐藏。</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
